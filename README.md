@@ -1,8 +1,12 @@
 # Iterated Prisoner's Dilemma
 
-To generate the tables with all the strategies
+See the whole article [here](https://dev.ewen.quimerch.com/articles/4-strategies-IPD.html).
 
-```
+Edit `english-iterated-prisoners-dilemma.py` or `french-iteraiterated-prisoners-dilemma.pyted-prisoners-dilemma.py` to create your own strategies.
+
+To test them and creates the graphics with all the strategies, run:
+
+```bash
 pip install -r requirements.txt
-python3 french-iterated-prisoners-dilemma.py
+python3 english-iterated-prisoners-dilemma.py
 ```
