@@ -1,6 +1,6 @@
 # ======================================================== #
 # ======================================================== #
-# =================== Théorie des jeux =================== #
+# ===================== Game Theory ====================== #
 # ======================================================== #
 # ======================================================== #
 
@@ -20,7 +20,7 @@ import matplotlib.pyplot as plt
 import xlsxwriter
 
 # ========================================================= #  
-# ================== Fonction auxiliaire ================== #
+# ===================== Transposition ===================== #
 # ========================================================= # 
 
 def transpose(A):
@@ -32,7 +32,7 @@ def transpose(A):
     return B
     
 # ========================================================= #  
-# ================== Modélisation du jeu ================== #
+# ===================== Modelisation ====================== #
 # ========================================================= # 
 
 initial_game = (0, 0)
@@ -42,7 +42,7 @@ initial_game = (0, 0)
 utility_matrix = np.array([[[R, R], [S, T]],
                           [[T, S], [P, P]]])
 
-# on les considère comme des variables globales
+# These are global variables
 
 # ================================================ #  
 # ================== STRATEGIES ================== #
@@ -68,13 +68,13 @@ random_strat  = {"strat" : np.array([[0.5,0.5],
 strat_indecis = {"strat" : np.array([[0,0],
                                      [1,1]]),
                  "first" : 1,
-                 "name" : "Irresolute"} #(il alterne entre trahir et coopérer)
+                 "name" : "Irresolute"}
 
  
 # ================== Deterministic (pure) strategies ================== #
 
-tit_for_tat = {"strat" : np.array([[1,0],    # si l'adv a coopéré, on cooperera au prochain tour
-                                     [1,0]]),  # si l'adv a trahi, on le trahira
+tit_for_tat = {"strat" : np.array([[1,0],   
+                                   [1,0]]),
                  "first" : 1,
                  "name" : "Copycat (tit for tat)"} 
                  
@@ -87,7 +87,7 @@ resentful = {"strat" : np.array([[1,0],
 strat_inverse = {"strat" : np.array([[0,1],
                                      [0,1]]),
                  "first" : 1,
-                 "name" : "Inverse tit-for-tat"} # si l'adv a coop, on le trahira
+                 "name" : "Inverse tit-for-tat"}
                  
 # ================== Mixed strategies ================== #
 
